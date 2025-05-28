@@ -74,7 +74,7 @@ const Body = () => {
           <input className="ml-4" type="checkbox" checked={showFinished} onChange={toggleFinished}/> Show Finished
           {todos.length === 0 && <div className="text-center text-lg">No Tasks</div>}
           {todos.map((item, index) => {
-            return (showFinished||!queueMicrotaskitem.isCompleted) && <div key={index} className="todos">
+            return (showFinished||!item.isCompleted) && <div key={index} className="todos">
               <div
                 className={
                   item.isCompleted
